@@ -7,7 +7,7 @@ const Terms = () => {
           <h1 className="text-3xl font-bold mb-4">Terms of Service</h1>
           <p className="mb-6">Welcome to Playk!</p>
           <p className="mb-6">
-            By accessing or using this website (the "Site"), you agree to comply with these Terms of Service. If you do not agree, please do not use the Site.
+            By accessing or using this website (the &quot;Site&quot;), you agree to comply with these Terms of Service. If you do not agree, please do not use the Site.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-2">1. Use of the Site</h2>
@@ -27,7 +27,7 @@ const Terms = () => {
 
           <h2 className="text-2xl font-semibold mt-8 mb-2">4. Limitation of Liability</h2>
           <p className="mb-6">
-            Playk is not liable for any damages arising from the use or inability to use the Site. The content is provided "as is" without warranties of any kind.
+            Playk is not liable for any damages arising from the use or inability to use the Site. The content is provided &quot;as is&quot; without warranties of any kind.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-2">5. Changes to Terms</h2>
@@ -45,4 +45,3 @@ const Terms = () => {
 };
 
 export default Terms;
-
