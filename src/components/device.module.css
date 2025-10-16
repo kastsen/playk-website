@@ -1,0 +1,184 @@
+.iphoneContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.device {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.deviceFrame {
+    background: #222;
+    border-radius: 50px;
+    box-shadow: inset 0 0 2px 0 #c8cacb, inset 0 0 0 3px #e2e3e4;
+    height: 790px;
+    width: 404px;
+    padding: 9px;
+    position: relative;
+}
+
+.deviceContent {
+    background-color: #222;
+    background-position: 50%;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    border-radius: 40px;
+    height: 100%;
+    width: 100%;
+}
+
+.iframe {
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: relative;
+    z-index: 3;
+}
+
+.deviceSensors::after, .deviceSensors::before {
+    content: '';
+    position: absolute;
+}
+
+.deviceSensors::after {
+    background: #444;
+    border-radius: 3px;
+    height: 6px;
+    left: 50%;
+    margin-left: -25px;
+    top: 16px;
+    width: 50px;
+}
+
+.deviceSensors::before {
+    background: #444;
+    border-radius: 50%;
+    height: 14px;
+    left: 50%;
+    margin-left: 40px;
+    top: 12px;
+    width: 14px;
+}
+
+.deviceBtns {
+    background: #c8cacb;
+    height: 32px;
+    left: -3px;
+    position: absolute;
+    top: 115px;
+    width: 3px;
+}
+
+.deviceBtns::after, .deviceBtns::before {
+    background: #c8cacb;
+    content: '';
+    height: 62px;
+    left: 0;
+    position: absolute;
+    width: 3px;
+}
+
+.deviceBtns::after {
+    top: 60px;
+}
+
+.deviceBtns::before {
+    top: 140px;
+}
+
+.devicePower {
+    background: #c8cacb;
+    height: 100px;
+    position: absolute;
+    right: -3px;
+    top: 200px;
+    width: 3px;
+}
+
+.circle {
+    position: absolute;
+    border: 3px solid transparent;
+    border-top-color: #c0e1da;
+    border-radius: 50%;
+    animation: rotate linear infinite;
+    z-index: 2;
+}
+
+.circle.one {
+    height: 50px;
+    width: 50px;
+    left: 50px;
+    top: 50px;
+    animation-duration: 0.85s;
+}
+
+.circle.two {
+    height: 75px;
+    width: 75px;
+    top: 38px;
+    left: 38px;
+    animation-duration: 0.95s;
+}
+
+.circle.three {
+    height: 100px;
+    width: 100px;
+    top: 25px;
+    left: 25px;
+    animation-duration: 1.05s;
+}
+
+.circle.hidden {
+    display: none;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -90px 0 0 -90px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateZ(-360deg);
+    }
+    to {
+        transform: rotateZ(0deg);
+    }
+}
+
+@media (max-width: 639.8px) and (orientation: portrait) {
+    .iphoneContainer {
+        background: #222;
+        z-index: 8;
+    }
+    .iphoneContainer, .iframe {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .iframe {
+        border-radius: 0;
+        z-index: 10;
+    }
+    .loader {
+        z-index: 9;
+    }
+    .deviceBtns, .devicePower, .deviceHome {
+        display: none;
+    }
+    .deviceFrame {
+        box-shadow: none;
+    }
+}

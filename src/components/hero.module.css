@@ -1,0 +1,133 @@
+.section {
+    position: relative;
+    height: 100dvh;
+    max-height: 76vw;
+    min-height: 600px;
+    background: linear-gradient(to right, #000000, #000a1a, #2c2c2c);
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    padding: 50px 0 0 var(--xl-p-x);
+    display: flex;
+    align-items: center;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 30vw;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, transparent, #100703);
+        background-size: cover;
+        z-index: 0;
+    }
+}
+
+.offer {
+    color: white;
+    position: relative;
+    z-index: 2;
+    max-width: 40vw;
+}
+
+.title {
+    font-size: calc(54 / 14.4 * 1vw);
+}
+
+.description {
+    font-size: calc(19 / 14.4 * 1vw);
+    margin: calc(24 / 14.4 * 1vw) 0 calc(32 / 14.4 * 1vw);
+    line-height: 1.4;
+    opacity: .7;
+}
+
+.iframe {
+    border: 0;
+    position: absolute;
+    left: -3vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 105vw;
+    height: 50vw;
+    z-index: 1;
+}
+
+@media (max-width: 1500px) {
+    .section {
+        &:after {
+            background: #100703;
+        }
+    }
+    .iframe {
+        width: 145vw;
+        left: -20vw;
+        height: 50vw;
+    }
+}
+
+
+
+@media (max-width: 1023px) {
+    .section {
+        padding-left: var(--md-p-x);
+    }
+
+    .title {
+        font-size: calc(44 / 10.24 * 1vw);
+    }
+
+    .description {
+        font-size: calc(20 / 10.24 * 1vw);
+        margin: calc(28 / 10.24 * 1vw) 0 calc(34 / 10.24 * 1vw);
+        br {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1023px) and (orientation: landscape) {
+    .section {
+        min-height: 100dvh;
+    }
+}
+
+@media (max-width: 639.8px) {
+    .section {
+        flex-direction: column;
+        padding: 3vw;
+        justify-content: center;
+        align-items: center;
+        max-height: 100dvh;
+        &:after {
+            height: 60dvh;
+        }
+    }
+    .offer {
+        max-width: 80vw;
+        text-align: center;
+        order: 1;
+    }
+    .title {
+        font-size: calc(24 / 3.6 * 1vw);
+        br {
+            display: none;
+        }
+    }
+    .iframe {
+        position: relative;
+        width: 180vw;
+        height: 90vw;
+        left: -35vw;
+        z-index: 1;
+        order: 0;
+        top: 0;
+        transform: translateY(0);
+        margin-top: -10vw;
+        margin-bottom: 10vw;
+    }
+
+    .description {
+        font-size: calc(15 / 3.6 * 1vw);
+        margin: calc(20 / 3.6 * 1vw) 0 calc(25 / 3.6 * 1vw);
+    }
+}

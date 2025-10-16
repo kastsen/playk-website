@@ -1,0 +1,59 @@
+.header {
+    padding: 0 var(--xl-p-x);
+}
+
+.scrolled {
+    background: transparent;
+}
+
+.logo {
+    max-width: calc(36 / 14.4 * 1vw);
+}
+
+.navigation {
+    font-size: calc(13 / 14.4 * 1vw);
+    a {
+        color: white;
+        &:hover {
+            color: #3e8e8b;
+        }
+    }
+}
+
+.menuIcon {
+    stroke: white;
+}
+
+.mobileNavigation {
+    background: linear-gradient(to top, #132335, #100703);
+}
+
+@media (max-width: 1580px) {
+    .navigation {
+        font-size: calc(15 / 14.4 * 1vw);
+    }
+    .logo {
+        max-width: calc(40 / 14.4 * 1vw);
+    }
+}
+
+@media (max-width: 1023px) {
+    .header {
+        padding: 0 var(--md-p-x);
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .navigation {
+        font-size: calc(16 / 10.24 * 1vw);
+    }
+    .logo {
+        max-width: calc(40 / 10.24 * 1vw);
+    }
+}
+
+@media screen and (max-width: 639.8px) {
+    .logo {
+        max-width: 24px;
+    }
+}

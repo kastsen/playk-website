@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+    --background: linear-gradient(to top, #132335, #100703);
+    --xl-p-x: 8.2vw;
+    --md-p-x: 5.45vw;
+    --sm-p-x: 4vw;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    font-family: var(--font-geist-sans), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+p {
+    font-weight: 300;
+}
+
+@media (max-width: 1023px) {
+    .show-desktop-only {
+        display: none;
+    }
+}
+
+
