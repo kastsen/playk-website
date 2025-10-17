@@ -167,7 +167,7 @@
     }
 
     .tagName {
-        padding: calc(4 / 3.6 * 1vw) calc(7 / 3.6 * 1vw) calc(2 / 3.6 * 1vw);
+        padding: calc(2.5 / 3.6 * 1vw) calc(7 / 3.6 * 1vw) calc(2 / 3.6 * 1vw);
         margin-right: calc(9 / 3.6 * 1vw);
         font-size: calc(9 / 3.6 * 1vw);
     }
