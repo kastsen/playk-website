@@ -115,15 +115,15 @@
     }
     .iframe {
         position: relative;
-        width: 180vw;
-        height: 90vw;
-        left: -35vw;
+        width: 200vw;
+        height: 100vw;
+        left: -40vw;
         z-index: 1;
         order: 0;
         top: 0;
         transform: translateY(0);
-        margin-top: -10vw;
-        margin-bottom: 10vw;
+        margin-top: -14vw;
+        margin-bottom: 6vw;
     }
 
     .description {

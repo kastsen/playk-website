@@ -13,12 +13,12 @@ const Privacy = () => {
           <h2 className="text-2xl font-semibold mt-8 mb-2">1. Information We Collect</h2>
           <p className="mb-6">
             - We do not collect personal data through forms or sign-ups.<br/>
-            - We use Google Analytics to gather anonymous data about website traffic, user interactions, and site performance.
+            - We use Vercel Analytics to gather anonymous data about website traffic, user interactions, and site performance.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-2">2. Cookies</h2>
           <p className="mb-6">
-            - Google Analytics uses cookies to help us understand website usage.<br/>
+            - Vercel Analytics may use cookies for basic anonymous analytics.<br/>
             - You can manage cookies in your browser settings.
           </p>
 
@@ -37,12 +37,12 @@ const Privacy = () => {
           <p className="mb-6">
             - If you are in the EU, you have rights to access, correct, or delete any personal information processed.<br/>
             - Residents of New Zealand have rights under the Privacy Act to access and correct personal data.<br/>
-            - Since we do not collect personal data via forms, these rights are minimal but you may opt out of Google Analytics tracking via your browser.
+            - Since we do not collect personal data via forms and Vercel Analytics is fully anonymous, these rights are minimal.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-2">6. Data Security</h2>
           <p className="mb-6">
-            - We take reasonable measures to protect anonymous user data collected via analytics.<br/>
+            - We take reasonable measures to protect anonymous data collected via Vercel Analytics.<br/>
             - No sensitive personal information is stored on this Site.
           </p>
 

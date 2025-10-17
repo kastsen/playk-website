@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
     subsets: ["latin"],
@@ -34,11 +35,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
       <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="antialiased font-sans">
-      <Header />
-      <main>{children}</main>
-      <Footer />
-      </body>
+        <Analytics />
+        <body className="antialiased font-sans">
+          <Header />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </body>
       </html>
   );
 }
