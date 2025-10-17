@@ -1,16 +1,31 @@
 import { Metadata } from 'next';
-import GameClient from './GameClient';
-import { gamesData } from '../gamesData';
+import { gamesData } from '@/data/gamesData';
+import Game from '@/components/Game';
 
-export async function generateMetadata(
-    { params }: { params: { slug: string } }
-): Promise<Metadata> {
-  const game = gamesData.find((g) => g.slug === params.slug);
-  return { title: game ? `Play ${params.slug}` : 'Game not found' };
+interface PageProps {
+  params: Promise<{ slug: string }>;
 }
 
-export default function GamePage(
-    { params }: { params: { slug: string } }
-) {
-  return <GameClient slug={params.slug} />;
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const game = gamesData.find(g => g.pageSlug === slug);
+
+  return {
+    title: game ? game.pageTitle : 'Game not found',
+  };
+}
+
+export default async function GamePage({ params }: PageProps) {
+  const { slug } = await params;
+  const game = gamesData.find(g => g.pageSlug === slug);
+
+  if (!game) {
+    return (
+        <div className="text-center mt-10 text-xl">
+          Game not found 😢
+        </div>
+    );
+  }
+
+  return <Game slug={slug} />;
 }

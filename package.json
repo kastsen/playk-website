@@ -6,13 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-pwa": "npm run generate-pwa-assets && npm run fix-manifest-paths",
+    "generate-pwa-assets": "pwa-asset-generator ./src/assets/icon.png ./public/images/pwa-icons --manifest ./public/manifest.json --manifest-icons-path /images/pwa-icons --background '#317EFB' --type png",
+    "fix-manifest-paths": "node -e \"let fs = require('fs'); let manifest = fs.readFileSync('./public/manifest.json', 'utf8'); manifest = manifest.replace(/public\\//g, '/'); fs.writeFileSync('./public/manifest.json', manifest);\""
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "next": "15.5.4",
+    "next-pwa": "^5.6.0",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
@@ -24,6 +28,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
+    "pwa-asset-generator": "^8.1.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
