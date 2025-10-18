@@ -30,6 +30,7 @@ export default async function GamePage({ params }: PageProps) {
 
   return (
       <>
+        <div className="swipe-controls"></div>
         <Game slug={slug} />
         <Contact/>
       </>

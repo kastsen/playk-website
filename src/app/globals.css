@@ -60,3 +60,23 @@ p {
         height: 60dvh;
     }
 }
+
+@media screen and (max-width: 639.8px) {
+    .swipe-controls {
+        &:before, &:after {
+            content: '';
+            position: fixed;
+            top: 0;
+            width: 20px;
+            height: 100%;
+            z-index: 12;
+            background: transparent;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
+        }
+    }
+}
