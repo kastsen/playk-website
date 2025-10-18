@@ -24,7 +24,7 @@ export const gamesData: GameItem[] = [
     portfolioCardText: "A calming experience where the goal is to keep the ball in the air.",
     portfolioCardImage: "/images/bal-game.webp",
     pageUrl: "/games/bounce-ball",
-    gameUrl: "/iframe-games/bounce-ball.html",
+    gameUrl: "https://playablemajor.netlify.app/bounce-ball.html",
     desktop: false,
     tags: [
       { name: "Game", bgColor: "#e0f0ff", textColor: "#0070f3" },

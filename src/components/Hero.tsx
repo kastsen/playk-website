@@ -7,8 +7,6 @@ import { usePathname } from "next/navigation"
 
 export default function Hero() {
   const pathname = usePathname()
-
-  // Изначальное состояние по pathname
   const [isHomePage, setIsHomePage] = useState(pathname === '/')
 
   useEffect(() => {
