@@ -34,10 +34,7 @@ export default function Hero() {
             comes next
           </h1>
           <p className={styles.description}>
-            I collaborate with studios, publishers, and platforms <br />across the game space.
-            <span className="show-desktop-only">
-              Let’s build something <br />extraordinary that players won’t just see, but feel.
-            </span>
+            I collaborate with studios, publishers, and platforms <br />across the game space
           </p>
           <Button text="Send Offer" url="/#contact" />
         </div>
