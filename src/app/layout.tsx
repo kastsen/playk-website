@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {Analytics} from "@vercel/analytics/next";
 import {SpeedInsights} from "@vercel/speed-insights/next";
+import Hero from "@/components/Hero";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -60,7 +61,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased font-sans">
         <Header />
-        <main>{children}</main>
+        <main>
+          <Hero/>
+          {children}
+        </main>
         <Footer />
         <Analytics />
         <SpeedInsights />

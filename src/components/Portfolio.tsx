@@ -13,7 +13,7 @@ export default function Portfolio() {
             A curated selection of playable demos, <br /> creative experiments, and game concepts
           </p>
 
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${styles.col}`}>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ${styles.col}`}>
             {gamesData.map((item, index) => (
                 <Link
                     key={index}

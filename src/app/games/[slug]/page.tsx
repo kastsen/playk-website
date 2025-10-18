@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { gamesData } from '@/data/gamesData';
 import Game from '@/components/Game';
+import Contact from "@/components/Contact";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -27,5 +28,10 @@ export default async function GamePage({ params }: PageProps) {
     );
   }
 
-  return <Game slug={slug} />;
+  return (
+      <>
+        <Game slug={slug} />
+        <Contact/>
+      </>
+  );
 }

@@ -25,7 +25,7 @@
 }
 
 .mobileNavigation {
-    background: linear-gradient(to top, #132335, #100703);
+    background: var(--background);
 }
 
 @media (max-width: 1580px) {

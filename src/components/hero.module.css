@@ -1,26 +1,23 @@
-.section {
+.section:not(.hidden) {
     position: relative;
     height: 100dvh;
     max-height: 76vw;
     min-height: 600px;
-    background: linear-gradient(to right, #000000, #000a1a, #2c2c2c);
+    background: linear-gradient(to right, var(--color-dark-brown), #000a1a, #2c2c2c);
     background-size: cover;
     width: 100%;
     overflow: hidden;
     padding: 50px 0 0 var(--xl-p-x);
     display: flex;
     align-items: center;
-    &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 30vw;
-        left: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, transparent, #100703);
-        background-size: cover;
-        z-index: 0;
-    }
+}
+
+.hidden {
+    opacity: 0 !important;
+    height: 0;
+    width: 0;
+    position: fixed;
+    pointer-events: none;
 }
 
 .offer {
@@ -50,14 +47,11 @@
     width: 105vw;
     height: 50vw;
     z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease 0.5s;
 }
 
 @media (max-width: 1500px) {
-    .section {
-        &:after {
-            background: #100703;
-        }
-    }
     .iframe {
         width: 145vw;
         left: -20vw;

@@ -4,7 +4,8 @@
 }
 
 .fish {
-    background-image: url('/images/fish.webp');
+    background-image: url('/images/fish.svg');
+    background-size: cover;
     width: 235px;
     height: 104px;
     margin-left: -235px;
@@ -36,7 +37,6 @@
 
 .title {
     font-size: calc(32 / 14.4 * 1vw);
-    font-weight: 400;
     margin-bottom: calc(20 / 14.4 * 1vw);
     line-height: 1.2;
 }

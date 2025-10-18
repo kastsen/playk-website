@@ -7,6 +7,7 @@ const Footer = () => (
       <Logo className={styles.logo}/>
       <div className={styles.copyright}>
         <p className={styles.companyName}>© 2025 Playk</p>
+        <p>All Rights Reserved</p>
         <p>
           <Link href="/terms">
             Terms of Service
