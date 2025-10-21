@@ -3,6 +3,7 @@
 import Device from "@/components/Device";
 import { useIframeReloader } from "@/hooks/useIframeReloader";
 import {gamesData} from "@/data/gamesData";
+import {useScrollToTop} from "@/hooks/useScrollToTop";
 
 interface Props {
   slug: string;
@@ -11,6 +12,8 @@ interface Props {
 export default function Game({ slug }: Props) {
   const game = gamesData.find(g => g.pageSlug === slug);
   const iframeKey = useIframeReloader(640);
+
+  useScrollToTop();
 
   if (!game) return <h1 className="text-center mt-10 text-xl">Game not found 😢</h1>;
 
