@@ -18,6 +18,21 @@ export interface GameItem {
 
 export const gamesData: GameItem[] = [
   {
+    pageSlug: "trivia",
+    pageTitle: "Trivia Game Demo",
+    portfolioCardTitle: "Trivia Game",
+    portfolioCardText: "A neon game with simple mechanics and maximum excitement",
+    portfolioCardImage: "/images/trivia-game.webp",
+    pageUrl: "/games/trivia",
+    gameUrl: "https://playablemajor.netlify.app/trivia-demo.html",
+    desktop: true,
+    tags: [
+      { name: "Game", bgColor: "#1a1a40", textColor: "#00ffff" },
+      { name: "Demo", bgColor: "#240046", textColor: "#ff5af1" },
+      { name: "Quiz", bgColor: "#002b36", textColor: "#00ff99" },
+    ],
+  },
+  {
     pageSlug: "bounce-ball",
     pageTitle: "Bounce Ball Demo",
     portfolioCardTitle: "Bounce Ball",
