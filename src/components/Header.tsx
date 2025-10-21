@@ -4,7 +4,6 @@ import styles from './header.module.css';
 import { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import Link from "next/link";
 import {Logo} from "@/components/Logo";
 
 export const navigation = [
@@ -53,9 +52,9 @@ export default function Header() {
 
             <div className={`hidden lg:flex lg:gap-x-12 ${styles.navigation}`}>
               {navigation.map((item) => (
-                  <Link key={item.name} href={item.href} className="font-semibold">
+                  <a key={item.name} href={item.href} className="font-semibold">
                     {item.name}
-                  </Link>
+                  </a>
               ))}
             </div>
           </nav>
@@ -80,14 +79,14 @@ export default function Header() {
               <div className="-my-6 divide-y divide-gray-200">
                 <div className="space-y-2 py-6 text-center">
                   {navigation.map((item) => (
-                      <Link
+                      <a
                           key={item.name}
                           href={item.href}
                           className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
                           onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
-                      </Link>
+                      </a>
                   ))}
                 </div>
               </div>
