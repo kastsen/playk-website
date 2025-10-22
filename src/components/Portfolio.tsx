@@ -1,6 +1,5 @@
 import styles from './portfolio.module.css'
 import Image from "next/image"
-import Link from 'next/link'
 import { gamesData } from '@/data/gamesData'
 
 export default function Portfolio() {
@@ -15,7 +14,7 @@ export default function Portfolio() {
 
           <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ${styles.col}`}>
             {gamesData.map((item, index) => (
-                <Link
+                <a
                     key={index}
                     href={item.pageUrl ?? '#'}
                     className={`cursor-pointer rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col ${styles.card}`}
@@ -48,7 +47,7 @@ export default function Portfolio() {
                     <h3 className={styles.cardTitle}>{item.portfolioCardTitle}</h3>
                     <p className={styles.cardDescription}>{item.portfolioCardText}</p>
                   </div>
-                </Link>
+                </a>
             ))}
             <div className={`rounded-2xl shadow-lg bg-gray-100 flex items-center justify-center ${styles.more}`}></div>
           </div>
